@@ -1,7 +1,7 @@
 import * as THREE from "three";
 
 export default class Raycaster {
-    constructor(camera, renderer, controls) {
+    constructor(camera, renderer, controls,sequence) {
         window.unjolitheatre.raycaster = this;
 
         this.unjolitheatre = window.unjolitheatre;
@@ -9,6 +9,7 @@ export default class Raycaster {
         this.scene = this.unjolitheatre.scene;
         this.camera = camera;
         this.renderer = renderer;
+        this.sequence = sequence;
 
         this.scene = this.unjolitheatre.scene;
 

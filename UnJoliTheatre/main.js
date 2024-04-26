@@ -5,8 +5,9 @@ import UI from "./UI.js";
 import "./style.css";
 import DummyBox from "./DummyBox.js";
 
+
 export default class UnJoliTheatre {
-    constructor({ canvas, renderer, scene, camera, orbit, production }) {
+    constructor({ canvas, renderer, scene, camera, orbit, production,sequence }) {
         window.unjolitheatre = this;
 
         this.canvas = canvas;
@@ -15,12 +16,14 @@ export default class UnJoliTheatre {
         this.camera = camera;
         this.orbit = orbit;
         this.production = production;
+        this.sequence = sequence;
 
         // Theatre.js
         this.theatre = new Theatre();
         this.addToSheet = this.theatre.addToSheet; // Function to add new obj to theatre
 
-        this.dummyBox = new DummyBox(); // create the dummy box who's equal to the camera pos
+        this.dummyBox = new DummyBox();
+         // create the dummy box who's equal to the camera pos
 
         if (this.production) return;
 
